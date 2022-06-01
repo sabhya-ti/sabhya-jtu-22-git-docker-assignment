@@ -11,4 +11,4 @@ RUN pip install -r /code/requirements.txt
 # Copy your codebase into the Docker container.
 COPY . /code
 # Run FastAPI server on the port exposed above.
-CMD ["uvicorn", "main:app"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0"]
